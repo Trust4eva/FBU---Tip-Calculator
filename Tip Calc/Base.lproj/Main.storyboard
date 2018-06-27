@@ -46,7 +46,7 @@
                                 <rect key="frame" x="68" y="78" width="220" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.60552935730000002" green="0.15609562029999999" blue="0.95316547929999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="55"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="70"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
                                     <action selector="EditText:" destination="BYZ-38-t0r" eventType="editingChanged" id="71g-av-IAl"/>
@@ -61,6 +61,13 @@
                                 <color key="textColor" red="0.60552935730000002" green="0.15609562029999999" blue="0.95316547929999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMr-Im-JD7">
+                                <rect key="frame" x="12" y="385" width="352" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="70"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7u-RA-xqM">
                                 <rect key="frame" x="0.0" y="80" width="72" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -68,7 +75,7 @@
                                 <color key="textColor" red="0.60552935729313984" green="0.1560956203042593" blue="0.95316547926373052" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="aMd-uL-RST">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="aMd-uL-RST">
                                 <rect key="frame" x="16" y="281" width="345" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -76,10 +83,10 @@
                                     <action selector="Slider:" destination="BYZ-38-t0r" eventType="valueChanged" id="Hzj-VZ-yJt"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMr-Im-JD7">
-                                <rect key="frame" x="12" y="385" width="352" height="76"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cww-pk-AB2">
+                                <rect key="frame" x="68" y="257" width="257" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="70"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -94,8 +101,12 @@
                     <navigationItem key="navigationItem" title="Tip Calculator" id="ANN-9b-OzR"/>
                     <connections>
                         <outlet property="BillField" destination="JeZ-qj-Oap" id="Vit-uk-ptn"/>
+                        <outlet property="Dollar" destination="O7u-RA-xqM" id="FC5-Mh-16W"/>
+                        <outlet property="Slider" destination="aMd-uL-RST" id="5nD-Hv-jAV"/>
+                        <outlet property="SliderLabel" destination="cww-pk-AB2" id="UF6-nJ-Xun"/>
                         <outlet property="TipLabel" destination="o5e-QL-ESn" id="gKb-Ve-PMV"/>
                         <outlet property="TipSegmentedControl" destination="R5r-It-vvr" id="213-yc-1vd"/>
+                        <outlet property="Tipname" destination="mWp-O8-4qr" id="PMi-MR-hKn"/>
                         <outlet property="TotalLabel" destination="QMr-Im-JD7" id="igt-Qc-2ym"/>
                     </connections>
                 </viewController>

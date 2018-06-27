@@ -13,6 +13,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *TipLabel;
 @property (weak, nonatomic) IBOutlet UILabel *TotalLabel;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *TipSegmentedControl;
+@property (weak, nonatomic) IBOutlet UILabel *SliderLabel;
+@property (weak, nonatomic) IBOutlet UILabel *Tipname;
+@property (weak, nonatomic) IBOutlet UISlider *Slider;
+@property (weak, nonatomic) IBOutlet UILabel *Dollar;
 
 @end
 
@@ -38,9 +42,32 @@
 
 - (IBAction)EditingBegan:(id)sender {
     self.BillField.text = @"";
+    [UIView animateWithDuration:0.2 animations:^{
+        self.TipLabel.alpha = 0;
+        self.SliderLabel.alpha = 0;
+        self.TipSegmentedControl.alpha= 0;
+        self.TotalLabel.alpha = 0;
+        self.Tipname.alpha = 0;
+        self.Slider.alpha = 0;
+       
+        
+        
+    }];
     
 }
 - (IBAction)EditingEnd:(id)sender {
+ 
+    [UIView animateWithDuration:0.4 animations:^{
+        self.TipLabel.alpha = 1;
+        self.SliderLabel.alpha = 1;
+        self.TipSegmentedControl.alpha= 1;
+        self.TotalLabel.alpha = 1;
+        self.Tipname.alpha =1;
+        self.Slider.alpha = 1;
+        
+     
+        
+    }];
    
 }
 - (IBAction)Slider:(id)sender {
@@ -49,13 +76,12 @@
     number = [NSString stringWithFormat:@"$%.2f", slider.value];
     
      double bill = [self.BillField.text doubleValue];
-    double tip = [[number substringFromIndex:1] doubleValue];
+    double tip = [[number substringFromIndex:1] doubleValue] * bill;
     double total = bill + tip;
+    
+    self.SliderLabel.text = [NSString stringWithFormat:@"%.0f%s" , slider.value*100, "%"];
+     self.TipLabel.text = [NSString stringWithFormat: @"$%.2f", tip];
     self.TotalLabel.text = [NSString stringWithFormat: @"$%.2f", total];
-    
-    
-    
-    self.TipLabel.text = number;
 }
 
 
