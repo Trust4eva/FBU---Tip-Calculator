@@ -36,8 +36,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
-Challenges changes an NSString into a doublevalue
+Challenges changing an NSString into a doublevalue and using the label
 
 List an 3rd party libraries, icons, graphics, or other assets you used in your app.
 
