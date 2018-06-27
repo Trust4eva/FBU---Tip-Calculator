@@ -5,7 +5,7 @@
 
 Submitted by: **Trustin Harris**
 
-Time spent: **X** hours spent in total
+Time spent: **8** hours spent in total
 
 ## User Stories
 
@@ -22,13 +22,15 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [x] List anything else that you can get done to improve the app functionality!
+- [x] Bill field clears on touch
+- [x] User can use a slider for tip percentages
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+https://i.imgur.com/cc9mi0k.gif
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
